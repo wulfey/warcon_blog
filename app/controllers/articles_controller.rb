@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  # these methods all get the set_article before
 
   # GET /articles
   # GET /articles.json
@@ -10,6 +11,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    # @article = Article.find(params[:id])
   end
 
   # GET /articles/new
@@ -65,6 +67,7 @@ class ArticlesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
+      # used to find the article for each of the html actions
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
