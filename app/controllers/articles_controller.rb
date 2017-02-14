@@ -26,7 +26,14 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
+    #  debugger -- to use, just put in 'debugger' without quotes
+    # this will stop the live server hard and then you need to go to the IDE console
+    # you can query variable values directly, such as 'article_params'
+    # type 'n' in the console to go to the next execution block / line
+    # ctrl-z to exit gracefully
+ 
     @article = Article.new(article_params)
+    @article.user = User.first
 
     # respond_to do |format|
       if @article.save
