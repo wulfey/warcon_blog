@@ -9,10 +9,16 @@ Rails.application.routes.draw do
 root 'pages#index'
 
 
+
 get 'index', to: 'pages#index'
 get 'about', to: 'pages#about'
 get 'pages/index', to: 'pages#index'
 get 'pages/about', to: 'pages#about'
+
+get 'signup', to: 'users#new'
+resources :users, except: [:new]
+# post 'users', to: 'users#create'
+# http action, website.com/'address', to: 'controller#method_in_controller.rb'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
