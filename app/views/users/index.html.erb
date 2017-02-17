@@ -1,4 +1,11 @@
-<h2 align="center"> All WarCon Bloggers </h2>
+<h2 align="center"> WarCon Bloggers </h2>
+
+
+<div align="center">
+    <%= will_paginate %>
+</div>
+
+
 <div align="center">
     <% @users.each do |user| %>
         <ul class="listing">
@@ -15,3 +22,7 @@
     <% end %>
 </div>
 
+
+<div align="center">
+    <%= will_paginate %>
+</div>
