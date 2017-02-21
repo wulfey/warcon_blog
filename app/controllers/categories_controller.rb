@@ -34,5 +34,5 @@ class CategoriesController < ApplicationController
         redirect_to categories_path
       end
     end
-    
+
 end
