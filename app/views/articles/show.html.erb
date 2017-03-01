@@ -11,7 +11,7 @@
             <li> Created by: </li>
             <li> <%= link_to gravatar_for(@article.user), user_path(@article.user) %> </li>
             <li class="article-title"> <%= link_to @article.user.username, user_path(@article.user) %> </li>
-            <li><small> <%= pluralize(@article.user.articles.count, "article") if @article.user.articles %> </small></li>
+            <li><small> <%= pluralize(@article.user.articles.count, "artcile") if @article.user.articles %> </small></li>
             
         </div>
       </div>
@@ -22,12 +22,8 @@
   <hr>
   <%= simple_format(@article.description) %>
   
-  <% if @article.categories.any? %>
-    <p>Categories: <%= render @article.categories %> </p>
-  <% end %>
-  
   <div class="article-actions">
-    <% if logged_in? && (current_user == @article.user || current_user.admin? )%>
+    <% if logged_in? && current_user == @article.user %>
       <%= link_to 'Edit article', edit_article_path(@article), class: "btn btn-xs btn-primary" %> 
       <%= link_to 'Delete article', article_path(@article), method: :delete, 
                                     data: { confirm: "Sure about delete?"}, 
