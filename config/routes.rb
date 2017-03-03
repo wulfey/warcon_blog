@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :images
   resources :articles
   resources :categories, except: [:destroy]
   # The priority is based upon order of creation: first created -> highest priority.

@@ -19,8 +19,20 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+
 gem 'stripe'
 gem 'figaro'
+
+gem 'bootstrap-generators', git: 'git://github.com/decioferreira/bootstrap-generators.git'
+
+
+# images
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
