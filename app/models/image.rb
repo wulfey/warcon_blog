@@ -5,7 +5,7 @@ class Image < ActiveRecord::Base
   
   private 
     def picture_size
-        if picture.saize > 5.megabytes 
+        if picture.size > 5.megabytes 
             errors.add(:picture, "shoul dbe less than 5MB")
         end
     end
